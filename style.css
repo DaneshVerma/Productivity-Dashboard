@@ -1,0 +1,416 @@
+@font-face {
+  font-family: aeonik;
+  src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+:root {
+  --pre: #f8f4e1;
+  --sec: #4e1f00;
+  --tri1: #feba17;
+  --tri2: #74512d;
+  --red: red;
+  --green: rgb(0, 128, 38);
+  --blue: rgb(0, 89, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: aeonik;
+  color: var(--pre);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+}
+.main .elems {
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  position: absolute;
+}
+.main .elems header {
+  height: 40%;
+  width: 100%;
+  background: var(--tri2);
+  background-image: url(https://images.unsplash.com/photo-1561484930-998b6a7b22e8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+.main .elems header .header1 {
+  text-shadow: 1px 1px 5px black;
+}
+.main .elems header .header1 h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.main .elems header .header1 h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.main .elems header .header1 h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.main .elems header .header2 {
+  text-shadow: 1px 1px 5px black;
+}
+.main .elems header .header2 h2 {
+  font-size: 50px;
+  font-weight: 500;
+}
+.main .elems header .header2 h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.main .elems header .header2 h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.main .elems .allFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 42px;
+}
+.main .elems .allFeatures .elem {
+  background-color: var(--tri1);
+  height: 300px;
+  width: 220px;
+  border-radius: 10px;
+  font-size: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.main .elems .allFeatures .elem img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all ease-in 0.2s;
+}
+.main .elems .allFeatures .elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  text-align: right;
+  width: 100%;
+  font-weight: 200;
+  font-size: 28px;
+  transition: all ease 0.2s;
+}
+.main .elems .allFeatures .elem:active {
+  scale: 0.97;
+}
+.main .elems .allFeatures .elem:hover img {
+  scale: 1.2;
+}
+.main .elems .allFeatures .elem:hover h2 {
+  color: var(--pre);
+}
+.main .fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 40px;
+  display: none;
+  position: absolute;
+}
+.main .fullElem .back {
+  position: absolute;
+  right: 5%;
+  background-color: var(--red);
+  border-radius: 10px;
+  padding: 15px 22px;
+  border: none;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.main .fullElem .back:active {
+  scale: 0.97;
+}
+.main .todo-list-page h2 {
+  font-size: 50px;
+}
+.main .todo-list-page .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .todo-list-page .todo-container .add-task {
+  width: 33%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+.main .todo-list-page .todo-container .add-task form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+.main .todo-list-page .todo-container .add-task form textarea, .main .todo-list-page .todo-container .add-task form input[type=text] {
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 29px;
+  background-color: var(--pre);
+  border-radius: 5px;
+  color: var(--sec);
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+  font-weight: 500;
+}
+.main .todo-list-page .todo-container .add-task form .mark-imp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+.main .todo-list-page .todo-container .add-task form .mark-imp input {
+  scale: 2;
+}
+.main .todo-list-page .todo-container .add-task form .mark-imp label {
+  font-size: 20px;
+}
+.main .todo-list-page .todo-container .add-task form button {
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 700;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.main .todo-list-page .todo-container .add-task form button:active {
+  scale: 0.95;
+}
+.main .todo-list-page .todo-container .all-task {
+  width: 65%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: auto;
+}
+.main .todo-list-page .todo-container .all-task .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--pre);
+  padding: 20px 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.main .todo-list-page .todo-container .all-task .task h5 {
+  color: var(--sec);
+  font-size: 30px;
+  display: flex;
+  gap: 5px;
+  text-transform: capitalize;
+}
+.main .todo-list-page .todo-container .all-task .task h5 span[class=true] {
+  background-color: var(--red);
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 10px;
+  align-self: flex-start;
+  opacity: 1;
+}
+.main .todo-list-page .todo-container .all-task .task h5 span[class=false] {
+  opacity: 0;
+}
+.main .todo-list-page .todo-container .all-task .task button {
+  padding: 15px 30px;
+  background-color: green;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+}
+.main .daily-planer-page h2 {
+  font-size: 40px;
+}
+.main .daily-planer-page .day-planner {
+  background-color: var(--tri2);
+  height: 85%;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main .daily-planer-page .day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.main .daily-planer-page .day-planner .day-planner-time p {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  font-size: 18px;
+}
+.main .daily-planer-page .day-planner .day-planner-time input {
+  padding: 20px 40px;
+  width: 100%;
+  background-color: var(--sec);
+  border: none;
+  font-size: 28px;
+  padding-top: 34px;
+  outline: none;
+  border-radius: 5px;
+}
+.main .motivational-page {
+  position: relative;
+}
+.main .motivational-page .motivation-container, .main .motivational-page .motivation-container .motivational-wrapper {
+  height: 50%;
+  width: 30%;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .motivational-page .motivation-container:after, .main .motivational-page .motivation-container .motivational-wrapper:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--tri1);
+  filter: blur(150px);
+  position: absolute;
+  scale: 1.1;
+}
+.main .motivational-page .motivation-container .motivational-wrapper, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper {
+  background-color: var(--tri1);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 10px;
+  z-index: 1;
+}
+.main .motivational-page .motivation-container .motivational-wrapper:after, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper:after {
+  display: none;
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-heading, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-heading {
+  background-color: var(--tri2);
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 20px;
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-heading h2, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-heading h2 {
+  font-weight: 500;
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-quote, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-quote {
+  margin-top: 20px;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 15px;
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-quote h2, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-quote h2 {
+  font-weight: 500;
+  color: var(--sec);
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-auther, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-auther {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: right;
+}
+.main .motivational-page .motivation-container .motivational-wrapper .motivation-auther small, .main .motivational-page .motivation-container .motivational-wrapper .motivational-wrapper .motivation-auther small {
+  color: var(--sec);
+  font-size: 15px;
+  font-weight: 800;
+}
+.main .pomodoro-page h2 {
+  font-size: 60px;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.main .pomodoro-page .session {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: var(--green);
+  padding: 15px 30px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+.main .pomodoro-page .pomo-timer {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main .pomodoro-page .pomo-timer h1 {
+  font-size: 150px;
+}
+.main .pomodoro-page .pomo-timer button {
+  background-color: var(--tri2);
+  padding: 15px 40px;
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 2px black;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+.main .pomodoro-page .pomo-timer button:active {
+  box-shadow: 0px 0px 2px black;
+  transform: translate(1%, 1%);
+}

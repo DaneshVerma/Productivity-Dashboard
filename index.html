@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main">
+      <section class="elems">
+        <header>
+          <div class="header1">
+            <h2>24 April 2025</h2>
+            <h1>Saturday, 1:00:00 PM</h1>
+            <h4>Rajnandgaon, CG</h4>
+          </div>
+          <div class="header2">
+            <h2>20°c</h2>
+            <h4>Light rain</h4>
+            <h3 class="humidity">Humidity 79%</h3>
+            <h3 class="feel">21</h3>
+            <h3 class="wind">Wind 11.12 km/h</h3>
+          </div>
+        </header>
+        <div class="allFeatures">
+          <div class="todo elem" id="0">
+            <img
+              src="https://images.unsplash.com/photo-1634855105161-2f328c473638?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>To do list</h2>
+          </div>
+          <div class="daily elem" id="1">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1709431143193-b9a7c479d05f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Daily Planner</h2>
+          </div>
+          <div class="moti elem" id="2">
+            <img
+              src="https://images.unsplash.com/photo-1635352073050-23999f4022e0?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Motivation</h2>
+          </div>
+          <div class="pomo elem" id="3">
+            <img
+              src="https://images.unsplash.com/photo-1648457257285-cfbc3781cc54?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Pomodoro Timer</h2>
+          </div>
+          <div class="goal elem" id="4">
+            <img
+              src="https://images.unsplash.com/photo-1635241161466-541f065683ba?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
+        </div>
+      </section>
+      <section class="fullElem todo-list-page">
+        <button class="back" id="0">Close</button>
+        <h2>Your Personalized Task List</h2>
+        <div class="todo-container">
+          <div class="add-task">
+            <form>
+              <input type="text" placeholder="Enter Task" />
+              <textarea
+                placeholder="Enter Details"
+                rows="6"
+                cols="6"
+              ></textarea>
+              <div class="mark-imp">
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <label for="checkbox">Mark as Importaint</label>
+              </div>
+              <button>Add Task</button>
+            </form>
+          </div>
+          <div class="all-task"></div>
+        </div>
+      </section>
+      <section class="fullElem daily-planer-page">
+        <button class="back" id="1">Close</button>
+        <h2>Plan your Day to be More Productive</h2>
+
+        <div class="day-planner"></div>
+      </section>
+      <section class="fullElem motivational-page">
+        <button class="back" id="2">Close</button>
+        <div class="motivation-container">
+          <div class="motivational-wrapper">
+            <div class="motivation-heading">
+              <h2>Quote Of The Day</h2>
+            </div>
+            <div class="motivation-quote">
+              <h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+                eligendi nihil placeat voluptates! Molestiae, autem!
+              </h2>
+            </div>
+            <div class="motivation-auther">
+              <small>Lorem, ipsum.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fullElem pomodoro-page">
+        <button class="back" id="3">Close</button>
+        <h2>Study with me!</h2>
+        <h4 class="session">Work session</h4>
+        <div class="pomo-timer">
+          <h1>25:00</h1>
+          <button class="start-timer">Start</button>
+          <button class="pause-timer">Pause</button>
+          <button class="reset-timer">Reset</button>
+        </div>
+      </section>
+      <section class="fullElem daily-goals-page">
+        <button class="back" id="4">Close</button>
+        <h1>Daily Goals</h1>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
