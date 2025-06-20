@@ -251,7 +251,7 @@ function pomodoroTimer() {
 pomodoroTimer();
 
 function dailyGoals() {
-  document.querySelector(".goal-input")?.focus()
+  document.querySelector(".goal-input")?.focus();
   let goalDiv = document.querySelector(".goal-div");
   let btn = document.querySelector(".set-btn");
   let goalStore = localStorage.getItem("goal");
@@ -285,3 +285,74 @@ function dailyGoals() {
   });
 }
 dailyGoals();
+
+function themeChange() {
+  let flag = 0
+  let root = document.documentElement;
+  let trigger = document.querySelector(".theme-btn");
+  
+  trigger.addEventListener("click", () => {
+    console.log("clicked");
+
+    switch (flag) {
+      case 1:
+        root.style.setProperty("--pre", "#E17564");
+        root.style.setProperty("--sec", "#872341");
+        root.style.setProperty("--tri1", "#09122C");
+        root.style.setProperty("--tri2", "#09122C");
+        flag=2
+        break;
+      case 2:
+        root.style.setProperty("--pre", "#ECDFCC");
+        root.style.setProperty("--sec", "#697565");
+        root.style.setProperty("--tri1", "#3C3D37");
+        root.style.setProperty("--tri2", "#181C14");
+        flag=3
+        break;
+      case 3:
+        root.style.setProperty("--pre", "#FFEB00");
+        root.style.setProperty("--sec", "#577BC1");
+        root.style.setProperty("--tri1", "#344CB7");
+        root.style.setProperty("--tri2", "#000957");
+        flag = 4
+        break;
+      case 4:
+        root.style.setProperty("--pre", "#DCD7C9");
+        root.style.setProperty("--sec", "#A27B5C");
+        root.style.setProperty("--tri1", "#3F4F44");
+        root.style.setProperty("--tri2", "#2C3930");
+        flag =5;
+        break;
+      case 5:
+        root.style.setProperty("--pre", "#9EC8B9");
+        root.style.setProperty("--sec", "#5C8374");
+        root.style.setProperty("--tri1", "#1B4242");
+        root.style.setProperty("--tri2", "#2C3930");
+        flag =6;
+        break;
+      case 6:
+        root.style.setProperty("--pre", "#C69749");
+        root.style.setProperty("--sec", "#000000");
+        root.style.setProperty("--tri1", "#735F32");
+        root.style.setProperty("--tri2", "#282A3A");
+        flag =7;
+        break;
+      case 7:
+        root.style.setProperty("--pre", "#EEEEEE");
+        root.style.setProperty("--sec", "#222831");
+        root.style.setProperty("--tri1", "#00ADB5");
+        root.style.setProperty("--tri2", "#393E46");
+        flag = 0;
+        break;
+      default:
+        root.style.setProperty("--pre", "#D3ECCD");
+        root.style.setProperty("--sec", "#255F38");
+        root.style.setProperty("--tri1", "#27391C");
+        root.style.setProperty("--tri2", "#18230F");
+        flag = 1
+        break;
+    }
+  });
+}
+
+themeChange();

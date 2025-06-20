@@ -13,10 +13,10 @@
   src: url(./AeonikTRIAL-Bold.otf);
 }
 :root {
-  --pre: #f8f4e1;
-  --sec: #4e1f00;
-  --tri1: #feba17;
-  --tri2: #74512d;
+  --pre: #EEEEEE;
+  --sec: #222831;
+  --tri1: #00ADB5;
+  --tri2: #393E46;
   --red: red;
   --green: rgb(0, 128, 38);
   --blue: rgb(0, 89, 255);
@@ -38,49 +38,60 @@ body {
   height: 100%;
   width: 100%;
   background-color: var(--sec);
+  overflow: hidden;
+}
+
+.nav {
+  position: absolute;
+  z-index: 4;
+  bottom: -1rem;
+  width: 30%;
+  right: 0;
+  margin: 1rem 40px;
+  background-color: var(--tri2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+}
+.nav span {
+  color: var(--pre);
+  font-weight: 100;
+  font-style: italic;
+}
+.nav span span a {
+  font-style: normal;
+  text-decoration: none;
+}
+.nav button {
+  font-size: 1rem;
+  background-color: var(--pre);
+  padding: 3px;
+  border: none;
+  border-radius: 10px;
+  color: var(--tri1);
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all ease-in-out 0.1s;
+}
+.nav button:active {
+  scale: 0.9;
+}
+.nav button i {
+  color: var(--tri1);
 }
 
 .main {
   height: 100%;
   width: 100%;
+  padding-top: 10px;
 }
 .main .elems {
   height: 100%;
   width: 100%;
-  padding: 20px 40px;
+  padding: 0 40px;
   position: absolute;
-}
-.main .elems .nav {
-  width: 100%;
-  background-color: var(--tri2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  padding: 10px 20px 10px 20px;
-}
-.main .elems .nav span {
-  color: var(--pre);
-  font-weight: 700;
-  width: 30%;
-}
-.main .elems .nav h2 {
-  font-weight: 100;
-  width: 40%;
-}
-.main .elems .nav button {
-  font-size: 1rem;
-  background-color: var(--tri1);
-  padding: 2px 10px;
-  border: none;
-  border-radius: 20px;
-  color: var(--tri2);
-  cursor: pointer;
-  font-weight: bolder;
-}
-.main .elems .nav button:active {
-  scale: 0.9;
 }
 .main .elems header {
   height: 40%;
@@ -441,7 +452,7 @@ body {
   border-radius: 5px;
   border: none;
   box-shadow: 5px 5px 2px black;
-  transition: all ease 0.2s;
+  transition: all ease-in-out 0.1s;
   cursor: pointer;
 }
 .main .pomodoro-page .pomo-timer button:active {
