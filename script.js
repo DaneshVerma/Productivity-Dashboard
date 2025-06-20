@@ -249,3 +249,39 @@ function pomodoroTimer() {
   resetBtn.addEventListener("click", resetTimer);
 }
 pomodoroTimer();
+
+function dailyGoals() {
+  document.querySelector(".goal-input")?.focus()
+  let goalDiv = document.querySelector(".goal-div");
+  let btn = document.querySelector(".set-btn");
+  let goalStore = localStorage.getItem("goal");
+  let flag = 0;
+  if (goalStore) {
+    goalDiv.innerHTML = `<h1 class="goal-txt">" ${goalStore}. "</h1>`;
+    btn.textContent = "Change";
+    flag = 1;
+  }
+  function change() {
+    goalDiv.innerHTML = `<input class="goal-input"  autocomplete="off" name="goal-input" required placeholder="What's your todays goal">`;
+    btn.textContent = "Set Goal";
+    flag = 0;
+  }
+  btn.addEventListener("click", () => {
+    if (!flag) {
+      let input = document.querySelector(".goal-input");
+      let goal = input.value;
+      if (true) {
+        localStorage.setItem("goal", goal);
+        let newGoal = localStorage.getItem("goal");
+        goalDiv.innerHTML = `<h1 class="goal-txt">" ${newGoal}. "</h1>`;
+        flag = 1;
+        btn.textContent = "Change";
+      } else {
+        alert("Write down the Goal to set!");
+      }
+    } else {
+      change();
+    }
+  });
+}
+dailyGoals();
