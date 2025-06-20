@@ -10,7 +10,7 @@ function headerContent() {
     location = "bhanpuri";
   function weatherUpdate() {
     fetch(
-      ` http://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`
+      ` https://api.weatherapi.com/v1/current.json?key=${key}&q=${location}`
     ).then((data) => {
       data.json().then((data) => {
         headerTempreture.textContent = data.current.temp_c + "°c";
